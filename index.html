@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Samarindaku</title>
+		<link
+			rel="stylesheet"
+			href="node_modules\bootstrap\dist\css\bootstrap.min.css" />
+		<link rel="stylesheet" href="node_modules\boxicons\css\boxicons.min.css" />
+		<link rel="stylesheet" href="node_modules\aos\dist\aos.css" />
+		<script src="node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- NAVIGATION BAR -->
+		<nav
+			class="navbar fixed-top navbar-expand-lg bg-body-tertiary ori-navbar"
+			data-bs-theme="dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Samarindaku .</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#nav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item px-2 mx-2">
+							<a class="nav-link" aria-current="page" href="#">HOME</a>
+						</li>
+						<li class="nav-item px-2 mx-2">
+							<a class="nav-link" href="#about">ABOUT</a>
+						</li>
+						<li class="nav-item px-2 mx-2">
+							<a class="nav-link" href="#location">LOCATION</a>
+						</li>
+						<li class="nav-item px-2 mx-2 dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
+								GUIDE
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#wtd">What to Do?</a></li>
+								<li><a class="dropdown-item" href="#wts">Where to Stay?</a></li>
+								<li>
+									<a class="dropdown-item" href="#wte">What to Eat?</a>
+								</li>
+								<li>
+									<hr class="dropdown-divider" />
+								</li>
+								<li>
+									<a class="dropdown-item" href="#oleholeh">Oleh-oleh</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- DARK/LIGHT MODE -->
+					<a onclick="darkModeSwitch()">
+						<div class="dark-light">
+							<i class="bx bx-moon moon" id="moon"></i>
+							<i class="bx bx-sun sun" id="sun"></i>
+						</div>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- OFFCANVAS NAVBAR (MOBILE) -->
+		<nav class="navbar navbar-dark bg-dark fixed-top offcanvas-navbar">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Samarindaku .</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasDarkNavbar"
+					aria-controls="offcanvasDarkNavbar"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="offcanvas offcanvas-end text-bg-dark"
+					tabindex="-1"
+					id="offcanvasDarkNavbar"
+					aria-labelledby="offcanvasDarkNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+							Samarindaku .
+						</h5>
+						<button
+							type="button"
+							class="btn-close btn-close-white"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link" aria-current="page" href="#">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#location">Location</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									Guide
+								</a>
+								<ul class="dropdown-menu dropdown-menu-dark">
+									<li><a class="dropdown-item" href="#wtd">What to Do?</a></li>
+									<li>
+										<a class="dropdown-item" href="#wts">Where to Stay?</a>
+									</li>
+									<li><a class="dropdown-item" href="#wte">What to Eat?</a></li>
+									<li>
+										<hr class="dropdown-divider" />
+									</li>
+									<li>
+										<a class="dropdown-item" href="#oleholeh">Oleh-oleh</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- DARK/LIGHT MODE -->
+						<a onclick="darkModeSwitch()">
+							<div class="dark-light">
+								<i class="bx bx-moon moon" id="moonMobile"></i>
+								<i class="bx bx-sun sun" id="sunMobile"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- CAROUSEL -->
+		<div
+			id="carouselExampleAutoplaying"
+			class="carousel slide carousel-fade"
+			data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active parallax-layer">
+					<img src="assets/carousel/1.jpg" class="d-block w-100" alt="..." />
+				</div>
+				<div class="carousel-item parallax-layer">
+					<img src="assets/carousel/2.jpg" class="d-block w-100" alt="..." />
+				</div>
+				<div class="carousel-item parallax-layer">
+					<img src="assets/carousel/3.jpg" class="d-block w-100" alt="..." />
+				</div>
+				<div class="carousel-item parallax-layer">
+					<img src="assets/carousel/4.jpg" class="d-block w-100" alt="..." />
+				</div>
+				<div class="carousel-item parallax-layer">
+					<img src="assets/carousel/5.jpg" class="d-block w-100" alt="..." />
+				</div>
+				<div class="carousel-item parallax-layer">
+					<img src="assets/carousel/6.jpg" class="d-block w-100" alt="..." />
+				</div>
+			</div>
+			<div class="title">
+				<h1 style="font-weight: 900">Selamat Datang!</h1>
+			</div>
+			<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#carouselExampleAutoplaying"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-ico" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#carouselExampleAutoplaying"
+				data-bs-slide="next">
+				<span class="carousel-control-next-ico" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<!-- CONTAINER 1 (ABOUT) -->
+		<div class="container-fluid c1" id="about">
+			<div>
+				<div data-aos="fade-right">
+					<h1>SEJARAH SINGKAT SAMARINDA</h1>
+					<br />
+					<p>
+						Samarinda merupakan ibu kota dari provinsi Kalimantan Timur,
+						Indonesia serta kota dengan penduduk terbesar di seluruh Pulau
+						Kalimantan dengan jumlah penduduk 834.824 jiwa (2023). Samarinda
+						memiliki wilayah seluas 783 km² dengan kondisi geografi daerah
+						berbukit dengan ketinggian bervariasi dari 10 sampai 200 meter dari
+						permukaan laut.
+					</p>
+					<p>
+						Sebelum dikenalnya nama Samarinda, kawasan ini termasuk dalam
+						Kerajaan Kutai Kartanegara yang berdiri pada tahun 1300 M di Kutai
+						Lama, sebuah kawasan di hilir Sungai Mahakam dari arah tenggara
+						Samarinda. Kerajaan Kutai Kartanegara merupakan daerah taklukan
+						(vasal) dari Kerajaan Banjar yang semula bernama Kerajaan Negara
+						Dipa, ketika dipimpin oleh Maharaja Suryanata, sezaman dengan era
+						Kerajaan Majapahit (abad ke-14—15 M).Pusat Kerajaan Kutai
+						Kartanegara di Kutai Lama semula di Jahitan Layar, kemudian
+						berpindah ke Tepian Batu pada tahun 1635, setelah itu pindah lagi ke
+						Pemarangan (Jembayan) pada tahun 1732, terakhir di Tenggarong sejak
+						tahun 1781 hingga 1960. Penduduk awal yang mendiami Kalimantan
+						bagian timur adalah Suku Kutai Kuno yang disebut Melanti termasuk
+						ras Melayu Muda (Deutro Melayu) sebagai hasil percampuran ras
+						Mongoloid, Melayu, dan Wedoid yang migrasi dari Semenanjung Kra pada
+						abad ke-2 Sebelum Masehi (SM).
+					</p>
+					<br />
+				</div>
+
+				<div data-aos="fade-right">
+					<h1>ASAL-USUL NAMA SAMARINDA</h1>
+					<br />
+					<p>
+						Ada beraneka versi mengenai latar belakang terciptanya nama
+						Samarinda.
+					</p>
+					<ul>
+						<li>
+							Versi pertama berdasarkan persamaan ukuran tinggi rumah-rumah
+							rakit/terapung penduduk Bugis Wajo di Samarinda Seberang yang
+							tidak ada yang lebih tinggi antara satu dengan yang lain, sehingga
+							disebut “sama-rendah”, yang juga bermakna tatanan kemasyarakatan
+							yang egaliter.
+						</li>
+						<li>
+							Versi kedua berdasarkan persamaan ukuran tinggi Sungai Mahakam
+							dengan daratan di tepiannya yang sama-sama rendah. Sampai awal
+							dasawarsa tahun 1950-an setiap air Sungai Mahakam pasang naik,
+							sebagian besar jalan-jalan di Samarinda selalu terendam air.
+							Terlebih lagi jika sedang pasang besar, ada beberapa jalur jalan
+							yang sama sekali tidak dapat dilintasi kendaraan karena ketinggian
+							air yang merendamnya. Guna menanggulangi masalah tersebut, sejak
+							awal 1950-an dilakukan penurapan lalu jalan ditinggikan hingga
+							berkali-kali. Pada tahun 1978 ketinggian total bertambah 2 meter
+							dari permukaan awal sehingga jalan tidak lagi terendam kecuali
+							Mahakam pasang luar biasa.
+						</li>
+						<li>
+							Versi ketiga berdasarkan asal kata dari bahasa Sansekerta, yaitu
+							“Samarendo” yang berarti selamat sejahtera.
+						</li>
+						<li>
+							Versi keempat berdasarkan cerita rakyat bahwa nama Samarinda
+							berasal dari bahasa Melayu dari kata “samar” dan “indah”.
+						</li>
+					</ul>
+					<p>
+						Sampai menjelang akhir abad ke-20 atau sekitar dekade 1980-an warga
+						masih menyebut Samarinda dengan lafal “Samarenda” (pengucapan huruf
+						“e” seperti pada kata “beta”) walaupun dalam bahasa penulisannya
+						sudah berubah menjadi “Samarinda”.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTAINER 2 (LOCATION) -->
+		<div class="c-location-counter" id="location">
+			<div class="container-fluid c2 align-items-center">
+				<br />
+				<br />
+				<div data-aos="fade-down">
+					<div class="row justify-content-center">
+						<div class="col text-center">
+							<h1
+								style="
+									font-family: sans-serif;
+									font-weight: 900;
+									overflow: hidden;
+								">
+								LETAK KOTA SAMARINDA
+							</h1>
+						</div>
+					</div>
+				</div>
+				<br />
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63834.64896526083!2d117.09113240884295!3d-0.5013803406523989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67f9e3a5b4857%3A0xd9d9678dade6eae3!2sSamarinda%2C%20Samarinda%20City%2C%20East%20Kalimantan!5e0!3m2!1sen!2sid!4v1686621808085!5m2!1sen!2sid"
+					width="75%"
+					height="75%"
+					style="border: 0"
+					allowfullscreen="true"
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+			<!-- COUNTAINER (Counter) -->
+			<div class="container-fluid c-counter">
+				<div class="counter" id="counter1" data-target="834824">
+					<span class="count">0</span>
+					<p class="count-p">Jiwa</p>
+				</div>
+
+				<div class="counter" id="counter2" data-target="10">
+					<span class="count">0</span>
+					<p class="count-p">Kecamatan</p>
+				</div>
+
+				<div class="counter" id="counter3" data-target="59">
+					<span class="count">0</span>
+					<p class="count-p">Kelurahan</p>
+				</div>
+
+				<div class="counter" id="counter4" data-target="783">
+					<span class="count">0</span>
+					<p class="count-p">Luas (Km²)</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTAINER 3 (GUIDE) -->
+		<div class="c3-fluid" id="wtd">
+			<div class="container c3">
+				<!-- WHAT TO DO -->
+				<div data-aos="fade-up">
+					<h1 style="font-weight: 600">What to Do?</h1>
+					<p>
+						Sedang mencari kegiatan di Samarinda? Kami menyediakan informasi
+						terkini mengenai segala hal, mulai dari tempat wisata yang wajib
+						dikunjungi hingga tempat nongkrong lokal.
+					</p>
+					<br />
+				</div>
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+					<div class="col mb-3">
+						<!-- Card 1 (WHAT TO DO) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Islamic+Center+Samarinda/@-0.5023398,117.1202928,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f25f5807583:0x7666aadb9294c007!8m2!3d-0.5023398!4d117.1202928!16s%2Fg%2F11b6f50gj6?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to do/1.jpeg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Islamic Center</h4>
+										<p class="card-text">4.8/5 3,727 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Masjid</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 2 (WHAT TO DO) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Citra+niaga+samarinda/@-0.5027488,117.1471374,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f9df3bafceb:0x53ce39152b36c908!8m2!3d-0.5027542!4d117.1497123!16s%2Fg%2F11n8qq9m8l?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to do/2.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Citra Niaga</h4>
+										<p class="card-text">4.6/5 493 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Toko Suvenir</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 3 (WHAT TO DO) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/BIGmall+Samarinda/@-0.5262688,117.1133633,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f540a726c0d:0x1028f1a62624ffcb!8m2!3d-0.5262742!4d117.1159382!16s%2Fg%2F11b78qz3hx?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to do/3.jpeg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Big Mall</h4>
+										<p class="card-text">4,5/5 12.558 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary"
+												>Pusat Perbelanjaan</small
+											>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 4 (WHAT TO DO) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Mahakam+Lampion+Garden/@-0.5065392,117.1170444,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67e515caedd69:0x16d76b50635d8490!8m2!3d-0.5065446!4d117.1196193!16s%2Fg%2F11b7kc6z28?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to do/4.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Mahakam Lampion Garden</h4>
+										<p class="card-text">4.4/5 4,960 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Objek Wisata</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 5 (WHAT TO DO) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Taman+Samarendah/@-0.4967362,117.1413642,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f0ea7cacadf:0x655348e743bcb8a9!8m2!3d-0.4967416!4d117.1439391!16s%2Fg%2F11c6rwlj8t?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to do/5.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Taman Samarendah</h4>
+										<p class="card-text">4.3/5 7,761 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Taman Kota</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 6 (WHAT TO DO) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Air+Terjun+Berambai/@-0.3332867,117.1909784,17z/data=!3m1!4b1!4m6!3m5!1s0x2df5df4b7068b015:0x27232e3c9906117f!8m2!3d-0.3332921!4d117.1935533!16s%2Fg%2F11b7ztr3pr?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to do/6.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Air Terjun Berambai</h4>
+										<p class="card-text">4.2/5 240 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Objek Wisata</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div data-aos="zoom-in">
+					<a
+						href="https://www.tripadvisor.co.id/Attractions-g317102-Activities-Samarinda_East_Kalimantan_Kalimantan.html"
+						class="btn btn-dark"
+						role="button"
+						style="margin-top: 20px; width: 100%"
+						target="_blank"
+						id="buttonId1"
+						>More</a
+					>
+				</div>
+
+				<div id="wts"></div>
+				<!-- WHERE TO STAY -->
+				<div data-aos="fade-up">
+					<h1 style="font-weight: 600; margin-top: 100px">Where to Stay?</h1>
+					<p>
+						Temukan tempat menginap paling populer di Samarinda, lengkap dengan
+						rekomendasi dari sesama pengunjung dan penawaran hotel spesial.
+					</p>
+					<br />
+				</div>
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+					<div class="col mb-3">
+						<!-- Card 1 (WHERE TO STAY) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/HARRIS+Hotel+Samarinda/@-0.5201992,117.1144066,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67e37b0044f47:0x310675bd6e9311b9!8m2!3d-0.5202046!4d117.1169815!16s%2Fg%2F11cn3nc76h?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/where to stay/1.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">HARRIS Hotel</h4>
+										<p class="card-text">4,5/5 6.952 Ulasan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 2 (WHERE TO STAY) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Hotel+Ibis+Samarinda/@-0.5032366,117.1495624,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f8f2ca56147:0xc60d979d44a716bb!8m2!3d-0.503242!4d117.1521373!16s%2Fg%2F11fkf54hqg?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/where to stay/2.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Hotel Ibis</h4>
+										<p class="card-text">4,6/5 1.853 Ulasan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 3 (WHERE TO STAY) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Hotel+Mercure+Samarinda/@-0.5031513,117.1494525,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f9cd110748d:0x50519d80bf5789a4!8m2!3d-0.5031567!4d117.1520274!16s%2Fg%2F11j3t1xkdl?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/where to stay/3.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Hotel Mercure</h4>
+										<p class="card-text">4,6/5 2.248 Ulasan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 4 (WHERE TO STAY) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Midtown+Hotel+Samarinda/@-0.4803716,117.1507774,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f412ce17403:0x66d55fe0e30f0775!8m2!3d-0.480377!4d117.1533523!16s%2Fg%2F11bxfywdyh?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/where to stay/4.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Hotel Midtown</h4>
+										<p class="card-text">4,5/5 4.817 Ulasan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 5 (WHERE TO STAY) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Hotel+Bumi+Senyiur/@-0.5000283,117.1462298,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f0ad8db8b2d:0xe8199b1f31d37c11!8m2!3d-0.5000337!4d117.1488047!16s%2Fg%2F1w0h4yfy?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/where to stay/5.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Hotel Bumi Senyiur</h4>
+										<p class="card-text">4,5/5 3.955 Ulasan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 6 (WHERE TO STAY) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Swiss-Belhotel+Borneo+Samarinda/@-0.5032984,117.1489383,17z/data=!3m1!4b1!4m6!3m5!1s0x2df42bb45819a1cb:0x2ec79e2b20c15d6!8m2!3d-0.5033038!4d117.1538092!16s%2Fg%2F121w6dj2?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/where to stay/6.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Swiss-Belhotel Borneo</h4>
+										<p class="card-text">4,7/5 8.141 Ulasan</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div data-aos="zoom-in">
+					<a
+						href="https://www.tripadvisor.co.id/Hotels-g317102-Samarinda_East_Kalimantan_Kalimantan-Hotels.html"
+						class="btn btn-dark"
+						role="button"
+						style="margin-top: 20px; width: 100%"
+						target="_blank"
+						id="buttonId2"
+						>More</a
+					>
+				</div>
+
+				<!-- WHAT TO EAT -->
+				<div id="wte"></div>
+				<div data-aos="fade-up">
+					<h1 style="font-weight: 600; margin-top: 100px">What to Eat?</h1>
+					<p>
+						Ingin makan seperti penduduk setempat? Jangan lewatkan hidangan dan
+						tempat makan terbaik di Samarinda ini.
+					</p>
+					<br />
+				</div>
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+					<div class="col mb-3">
+						<!-- Card 1 (WHAT TO EAT) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Rumah+Makan+Pondok+Borneo/@-0.4752159,117.1624409,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f0b6b459cc5:0x78f62210f34d1043!8m2!3d-0.4752213!4d117.1650158!16s%2Fg%2F1pzs7ty1v?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to eat/1.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Pondok Borneo</h4>
+										<p class="card-text">4,5/5 2.509 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary"
+												>Restoran Seafood</small
+											>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 2 (WHAT TO EAT) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Ayam+goreng+banjar/@-0.4983316,117.1460134,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f0b3064c185:0xdc83668da113fd6e!8m2!3d-0.498337!4d117.1485883!16s%2Fg%2F1pzprbxg_?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to eat/2.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Ayam Goreng Banjar</h4>
+										<p class="card-text">4,5/5 2.170 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Restoran</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 3 (WHAT TO EAT) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/RM.+Amado+-+Soto+Banjar/@-0.5010889,117.1491356,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f0ac1ebae2f:0x2186d2f7ba159f49!8m2!3d-0.5010943!4d117.1517105!16s%2Fg%2F1hc6sksjj?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to eat/3.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">RM. Amado</h4>
+										<p class="card-text">4,4/5 1.736 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Restoran Soto</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 4 (WHAT TO EAT) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/Coto+Makassar+Marannu/@-0.4616076,117.1777083,17z/data=!3m1!4b1!4m6!3m5!1s0x2df5d6047e5b9f67:0xaf2874d52bc64b53!8m2!3d-0.461613!4d117.1802832!16s%2Fg%2F11b7rtrlg0?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to eat/4.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Coto Makassar Marannu</h4>
+										<p class="card-text">4,5/5 3.350 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary"
+												>Restoran Sulawesi Selatan</small
+											>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 5 (WHAT TO EAT) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/ALAYA+FOOD+FESTIVAL/@-0.466428,117.1720956,17z/data=!3m1!4b1!4m6!3m5!1s0x2df5d600160887b7:0x21ed83c02be8b10!8m2!3d-0.4664334!4d117.1746705!16s%2Fg%2F11bv3mr45y?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to eat/5.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Alaya Food Festival</h4>
+										<p class="card-text">4,3/5 1.634 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Restoran</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<!-- Card 6 (WHAT TO EAT) -->
+						<div data-aos="fade-up">
+							<a
+								href="https://www.google.com/maps/place/NEW+KEPALA+IKAN+(Samarinda)/@-0.5002173,117.1411458,17z/data=!3m1!4b1!4m6!3m5!1s0x2df67f0bd3d40657:0xfd111c373cf3b8e1!8m2!3d-0.5002227!4d117.1437207!16s%2Fg%2F11cjhyv_9y?hl=id&entry=ttu"
+								style="text-decoration: none"
+								target="_blank">
+								<div class="card card-hover">
+									<img
+										src="assets/cards/what to eat/6.jpg"
+										class="card-img-top"
+										alt="..." />
+									<div class="card-body">
+										<h4 class="card-title">Raja Kepala Ikan</h4>
+										<p class="card-text">4,4/5 1.906 Ulasan</p>
+										<p class="card-text">
+											<small class="text-body-secondary">Restoran Ikan</small>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div data-aos="zoom-in">
+					<a
+						href="https://www.tripadvisor.co.id/Restaurants-g317102-Samarinda_East_Kalimantan_Kalimantan.html"
+						class="btn btn-dark"
+						role="button"
+						style="margin-top: 20px; width: 100%"
+						target="_blank"
+						id="buttonId3"
+						>More</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTAINER 4 -->
+		<div class="container-fluid c4" id="oleholeh">
+			<div class="container c4-text" style="padding: 0; padding-bottom: 24px">
+				<div data-aos="fade-up">
+					<h1 style="font-weight: 600">Oleh-oleh khas Samarinda</h1>
+					<p>
+						Setelah mengunjungi tempat-tempat wisata, jangan lupa membawa pulang
+						ragam kuliner dan kerajinan khas kota ini.
+					</p>
+				</div>
+			</div>
+			<div class="container" style="padding: 0">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img
+									src="assets/oleh-oleh/keminting.jpg"
+									class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Keminting</h5>
+									<p class="card-text">
+										Makanan khas Samarinda ini adalah olahan kemiri dengan
+										tambahan sagu, gula dan tepung. Sekilas bentuknya terlihat
+										keras, tetapi setelah dikunyah akan terasa rasa manis gurih
+										yang enak. Jajanan tradisional Samarinda ini sejak dulu
+										hingga sekarang banyak disukai orang-orang. Maka tak salah
+										jika keminting bisa menjadi salah satu pilihan oleh-olehmu
+										dari Samarinda.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img
+									src="assets/oleh-oleh/ilat-sapi.jpg"
+									class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Ilat Sapi</h5>
+									<p class="card-text">
+										Makanan ini sangat populer di Samarinda. Tapi jangan salah
+										sangka dulu guys, karena kue ini tidak benar-benar terbuat
+										dari lidah sapi. Kue ini terbuat dari tepung dan gula merah.
+										Meski tampak keras, kue ini sangat lembut dengan rasa manis
+										yang lezat. Tak hanya Samarinda, kue ini juga terkenal di
+										Semarang. Ada berbagai bentuk kue ilat sapi yang bisa kamu
+										pilih di toko oleh-oleh dengan harga bervariasi.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img src="assets/oleh-oleh/amplang.jpg" class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Amplang</h5>
+									<p class="card-text">
+										Makanan ringan ini tidak hanya bisa ditemukan di Samarinda,
+										tetapi di seluruh Kalimantan Timur yang menjadi provinsi
+										khasnya. Amplang adalah makanan sejenis kerupuk ikan yang
+										renyah dan gurih. Amplang terbuat dari olahan tenggiri dan
+										tepung kanji yang dicampur bumbu rempah pilihan. Meski
+										banyak kerupuk ikan tersebar di Indonesia. Amplang khas
+										Samarinda ini tentu memiliki cita rasa berbeda.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img src="assets/oleh-oleh/tajong.jpg" class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Tajong Samarinda</h5>
+									<p class="card-text">
+										Sarung atau tajong Samarinda memiliki motif unik dengan
+										pilihan warna mencolok. Proses tenun sarung ini bervariasi
+										tergantung tingkat kesulitannya. Bisa 4 - 5 hari atau bahkan
+										15 hari. Maka jangan heran kalau harganya cukup menguras
+										kantong ya!
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img src="assets/oleh-oleh/batik.jpg" class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Batik Samarinda</h5>
+									<p class="card-text">
+										Samarinda juga memiliki batik khas yang disesuaikan dengan
+										kultur adat budayanya. Motif batik Samarinda menggambarkan
+										kerja keras, kebersamaan dan berbagai motif lain seperti
+										motif mandau, flora, fauna dan sebagainya, yang dipadukan
+										dalam warna-warna menarik. Batik khas Kalimantan Timur
+										menggunakan pewarna alami, seperti serat nanas, sutra, dan
+										sebagainya. Kamu bisa mendapatkan batik Samarinda dalam
+										bentuk kain dan baju.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img
+									src="assets/oleh-oleh/ulap-doyo.jpg"
+									class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Ulap Doyo</h5>
+									<p class="card-text">
+										Ulap doyo merupakan tenun warisan Dayak Benuaq yang memiliki
+										kekhasan tersendiri. Ulap doyo merupakan tenun ikat dari
+										serat daun doyo yang tumbuh liar di pedalaman Kalimantan.
+										Kerajinan tenun ulap doyo ini bisa kamu dapatkan dalam
+										bentuk kain, topi dan sebagainya. Kain ulap doyo biasanya
+										dipakai dalam upacara adat seperti ritual kematian,
+										pernikahan hingga pengobatan. Oleh-oleh khas Samarinda satu
+										ini wajib kamu bawa pulang karena hanya ada di Kalimantan.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img
+									src="assets/oleh-oleh/gula-gait.jpg"
+									class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Gula Gait</h5>
+									<p class="card-text">
+										Pembuatan jajanan berbentuk panjang dan kecil ini seperti
+										dodol. Bedanya, membutuhkan waktu lebih lama dalam
+										pengolahannya. Gula gait berbentuk seperti kayu dan terbuat
+										dari gula aren dan gula pasir. Namun, jangan berfikir kalau
+										kamu bisa menghabiskannya sekaligus, karena gula gait lebih
+										mirip permen dibanding kue. Jadi, kamu akan lebih menikmati
+										manisnya jajanan Samarinda ini.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img src="assets/oleh-oleh/roti.jpg" class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Roti Durian Panglima</h5>
+									<p class="card-text">
+										Dari banyaknya roti durian yang ada, Kue Durian Panglima
+										adalah yang paling banyak dicari di Samarinda. Roti gulung
+										ini tersedia dalam beragam toping dengan rasa creamy yang
+										nikmat di lidah. Dibuat dari bahan berkualitas dan berbagai
+										rasa, tetapi rasa durian dengan aroma khasnya dijamin
+										membuat siapapun ketagihan. Roti durian memiliki daya
+										ketahanan yang tidak terlalu lama yaitu hanya sekitar 3-5
+										hari saja.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-3">
+						<div data-aos="fade-up">
+							<div class="card">
+								<img
+									src="assets/oleh-oleh/aksesoris.jpg"
+									class="card-img-top" />
+								<div class="card-body c4-card-body">
+									<h5 class="card-title">Aksesoris</h5>
+									<p class="card-text">
+										Samarinda terkenal akan hasil bambu dan kayu, sehingga
+										banyak aksesoris dari bahan tersebut yang bisa kamu bawa
+										pulang sebagai cenderamata dalam bentuk gelang, kalung,
+										manik-manik yang dijadikan tas, dompet, gantungan kunci dan
+										lain sebagainya. Itu adalah beberapa pilihan oleh-oleh khas
+										Samarinda yang bisa menjadi pertimbanganmu saat wisata ke
+										Kota Tepian ini.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid footer"></div>
+		<script src="node_modules\aos\dist\aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
+	<script src="index.js"></script>
+</html>
