@@ -4,8 +4,7 @@
   "description": "Samarindaku adalah website tentang kota samarinda",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "vercel-build": "npm run build && vercel"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
