@@ -123,6 +123,10 @@ html {
 	color: rgb(255 255 255 / 75%);
 }
 
+.dropdown-menu {
+	--bs-dropdown-link-active-bg: #3b3f42;
+}
+
 #carouselExampleAutoplaying {
 	box-shadow: 0px 20px 6px 5px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: 1px -1px 6px 5px rgba(0, 0, 0, 0.75);
@@ -338,4 +342,10 @@ html {
 .footer {
 	background-color: #d4bea5;
 	padding: 25px;
+}
+
+.footer p {
+	color: #86705b;
+	text-align: center;
+	margin: 0;
 }
