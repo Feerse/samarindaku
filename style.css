@@ -32,7 +32,7 @@ html {
 .c4,
 .card,
 .c4-card-body,
-.footer {
+footer {
 	transition: 0.7s ease-in-out;
 }
 
@@ -51,7 +51,7 @@ html {
 .dark-footer {
 	transition: 0.7s ease-out;
 	background-color: #30353a !important;
-	color: #adb5bd !important;
+	color: #7b8086 !important;
 }
 
 .dark-light {
@@ -339,13 +339,31 @@ html {
 	background-color: aliceblue;
 }
 
-.footer {
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: 0.7s ease-in-out;
 	background-color: #d4bea5;
 	padding: 25px;
+	margin: 0;
 }
 
-.footer p {
-	color: #86705b;
-	text-align: center;
+footer p,
+footer h5 {
 	margin: 0;
+}
+
+.contact-logo {
+	padding: 0;
+	gap: 18px;
+	margin-top: 8px;
+	margin-bottom: 32px;
+	list-style-type: none;
+	display: flex;
+}
+
+.contact-logo a {
+	color: unset;
+	text-decoration: none;
 }
