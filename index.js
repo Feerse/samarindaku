@@ -43,7 +43,7 @@ window.addEventListener('scroll', parallaxScroll);
 function parallaxScroll() {
 	const scrolled = window.pageYOffset;
 
-	// Ubah nilai kecepatan parallax sesuai kebutuhan
+	// Nilai Kecepatan Parallax
 	const speed = 0.8;
 
 	const layers = document.querySelectorAll('.parallax-layer');
@@ -60,7 +60,7 @@ const body = document.body,
 	btnIds = document.querySelectorAll('#buttonId1, #buttonId2, #buttonId3'),
 	c4 = document.getElementById('oleholeh'),
 	c4Cards = document.querySelectorAll('.c4-card-body'),
-	footer = document.querySelector('.footer'),
+	footer = document.querySelector('footer'),
 	moons = document.querySelectorAll('#moon, #moonMobile'),
 	suns = document.querySelectorAll('#sun, #sunMobile');
 
